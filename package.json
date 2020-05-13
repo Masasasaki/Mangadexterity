@@ -1,0 +1,28 @@
+{
+  "name": "manga-reader",
+  "version": "1.0.0",
+  "description": "Readin' manga",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Masasasaki/Manga-Reader.git"
+  },
+  "author": "Masaki Asanuma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Masasasaki/Manga-Reader/issues"
+  },
+  "homepage": "https://github.com/Masasasaki/Manga-Reader#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mangadex-api": "^2.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
