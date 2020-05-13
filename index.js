@@ -1,16 +1,31 @@
 const express = require('express')
 const app = express()
+
+const cors = require('cors')
+
+app.use(cors())
+app.use(express.static('build'))
+
 const mangadex = require('mangadex-api')
 
-app.get('/', (req, res) => {
-    mangadex.getManga(29298).then(({ manga, chapter }) => {
-        const info = `Manga ${manga.title} has ${chapter.length} chapters!`
-        chapter = chapter.filter(ch => ch.lang_name === 'English')
-        mangadex.getChapter(chapter[0].id).then(chap => {
-            console.log(chap.page_array[0])
-            res.send(chap.page_array[0])
-        })
+app.get('/manga/:id', (req, res) => {
+    mangadex.getManga(req.params.id).then(({ manga, chapter }) => {
+        const mangaInfo = {
+            Manga: manga,
+            Chapter: chapter
+        }
+        res.json(mangaInfo)
     })
+})
+
+app.get('/chapters/:id', (req, res) => {
+    mangadex.getChapter(req.params.id).then(chapter => {
+        res.json(chapter)
+    }) 
+})
+
+app.get('/', (req, res) => {
+    res.send('Welcome to Manga Reader backend')
 })
 
 app.listen(3000, () => {

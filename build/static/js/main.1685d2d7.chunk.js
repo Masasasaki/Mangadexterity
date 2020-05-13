@@ -1,0 +1,2 @@
+(this.webpackJsonpyes=this.webpackJsonpyes||[]).push([[0],{13:function(n,e,t){n.exports=t(35)},35:function(n,e,t){"use strict";t.r(e);var o=t(1),r=t.n(o),a=t(12),c=t.n(a),u=t(2),l=t.n(u),s=function(n){return l.a.get("/manga/".concat(n)).then((function(n){return n.data}))},i=function(){return console.log(s(29298)),r.a.createElement("div",null,"Hello World!")};c.a.render(r.a.createElement(i,null),document.getElementById("root"))}},[[13,1,2]]]);
+//# sourceMappingURL=main.1685d2d7.chunk.js.map
