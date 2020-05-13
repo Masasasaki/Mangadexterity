@@ -1,24 +1,24 @@
 {
-  "name": "manga-reader",
+  "name": "mangadexterity",
   "version": "1.0.0",
-  "description": "Readin' manga",
+  "description": "Mangadex for the impatient",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build:ui": "rm -rf build && cd ../Manga-Reader-Frontend/ && npm run build --prod && cp -r build ../Manga-Reader-Backend/",
+    "build:ui": "rm -rf build && cd ../Manga-Reader-Frontend/ && npm run build --prod && cp -r build ../Mangadexterity/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Masasasaki/Manga-Reader.git"
+    "url": "git+https://github.com/Masasasaki/Mangadexterity.git"
   },
   "author": "Masaki Asanuma",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Masasasaki/Manga-Reader/issues"
+    "url": "https://github.com/Masasasaki/Mangadexterity/issues"
   },
-  "homepage": "https://github.com/Masasasaki/Manga-Reader#readme",
+  "homepage": "https://github.com/Masasasaki/Mangadexterity#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",

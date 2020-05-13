@@ -10,6 +10,7 @@ const mangadex = require('mangadex-api')
 
 app.get('/manga/:id', (req, res) => {
     mangadex.getManga(req.params.id).then(({ manga, chapter }) => {
+        chapter = chapter.filter(ch => ch.lang_name === 'English')
         const mangaInfo = {
             Manga: manga,
             Chapter: chapter
